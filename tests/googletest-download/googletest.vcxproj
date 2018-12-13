@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D152CAC-B44C-32F5-8561-853A9253730D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>googletest</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing download step (git clone) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-download.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\googletest-gitinfo.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing download step (git clone) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-download.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\googletest-gitinfo.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing download step (git clone) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-download.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\googletest-gitinfo.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing download step (git clone) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-download.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\googletest-gitinfo.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-update.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-update.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-update.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-update.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-patch.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-patch.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-patch.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-patch.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-configure.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-configure.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-configure.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-configure.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-build.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-build.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-build.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-build.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-install.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-install.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-install.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-install.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\0336bf8cee9f810809997d7d872d37c4\googletest-test.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-test.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-test.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-test.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\OneDrive\Dokument\repos\YEngine\tests\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-test.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\f8b015f5367ae89b16120972dcd27a2b\googletest-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/f8b015f5367ae89b16120972dcd27a2b/googletest-complete.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/f8b015f5367ae89b16120972dcd27a2b/googletest-complete.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/f8b015f5367ae89b16120972dcd27a2b/googletest-complete.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/f8b015f5367ae89b16120972dcd27a2b/googletest-complete.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\3d3ff1ff2cce3f5506cb10c720ecc0da\googletest.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/3d3ff1ff2cce3f5506cb10c720ecc0da/googletest.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/3d3ff1ff2cce3f5506cb10c720ecc0da/googletest.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/3d3ff1ff2cce3f5506cb10c720ecc0da/googletest.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/3d3ff1ff2cce3f5506cb10c720ecc0da/googletest.rule;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download -BD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download --check-stamp-file D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\RepositoryInfo.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\3.13.0-rc3\CMakeSystem.cmake;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download -BD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download --check-stamp-file D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\RepositoryInfo.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\3.13.0-rc3\CMakeSystem.cmake;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download -BD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download --check-stamp-file D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\RepositoryInfo.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\3.13.0-rc3\CMakeSystem.cmake;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download -BD:/OneDrive/Dokument/repos/YEngine/tests/googletest-download --check-stamp-file D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.13\Modules\RepositoryInfo.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\3.13.0-rc3\CMakeSystem.cmake;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\CMakeFiles\googletest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ZERO_CHECK.vcxproj">
+      <Project>{03FCEFB2-7AA5-38D9-90B0-9F282DFA0C40}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

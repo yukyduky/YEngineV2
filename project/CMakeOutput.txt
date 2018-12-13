@@ -1,0 +1,48 @@
+Warn about uninitialized values.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download
+Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2018-11-20 11:27:23.
+Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ALL_BUILD.vcxproj" on node 1 (default targets).
+Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ALL_BUILD.vcxproj" (1) is building "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "Win32\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+CustomBuild:
+  All outputs are up-to-date.
+FinalizeBuildStatus:
+  Deleting file "Win32\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Touching "Win32\Debug\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Done Building Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ZERO_CHECK.vcxproj" (default targets).
+Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ALL_BUILD.vcxproj" (1) is building "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest.vcxproj" (3) on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "Win32\Debug\googletest\googletest.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+CustomBuild:
+  Performing update step for 'googletest'
+  From https://github.com/google/googletest
+   + 5be33db...e25e6e4 9A681768AABE08D1EFA5CA77528236A4 -> origin/9A681768AABE08D1EFA5CA77528236A4  (forced update)
+  Current branch master is up to date.
+FinalizeBuildStatus:
+  Deleting file "Win32\Debug\googletest\googletest.tlog\unsuccessfulbuild".
+  Touching "Win32\Debug\googletest\googletest.tlog\googletest.lastbuildstate".
+Done Building Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\googletest.vcxproj" (default targets).
+InitializeBuildStatus:
+  Creating "Win32\Debug\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+CustomBuild:
+  All outputs are up-to-date.
+FinalizeBuildStatus:
+  Deleting file "Win32\Debug\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild".
+  Touching "Win32\Debug\ALL_BUILD\ALL_BUILD.tlog\ALL_BUILD.lastbuildstate".
+Done Building Project "D:\OneDrive\Dokument\repos\YEngine\tests\googletest-download\ALL_BUILD.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:13.43
+-- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/OneDrive/Dokument/repos/YEngine/project

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/3d3ff1ff2cce3f5506cb10c720ecc0da/googletest.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/f8b015f5367ae89b16120972dcd27a2b/googletest-complete.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-install.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-mkdir.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-download.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-update.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-patch.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-configure.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-build.rule"
+		},
+		{
+			"file" : "D:/OneDrive/Dokument/repos/YEngine/tests/googletest-download/CMakeFiles/0336bf8cee9f810809997d7d872d37c4/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}
